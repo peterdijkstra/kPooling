@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace kTools.Pooling
 {
-    abstract class Pool
+    public abstract class Pool
     {
 #region Fields
         readonly object m_Key;
@@ -21,7 +21,7 @@ namespace kTools.Pooling
 #endregion
     }
 
-    sealed class Pool<T> : Pool, IDisposable
+    public class Pool<T> : Pool, IDisposable
     {
 #region Fields
         readonly T m_Source;
